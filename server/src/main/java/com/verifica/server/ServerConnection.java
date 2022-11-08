@@ -25,7 +25,6 @@ public class ServerConnection {
     }
 
     public void connect() {
-        while(true) {
             Message message = read();
 
             if (message.getTickets().size() == 0) { write( new Message(tickets) ); }
@@ -47,7 +46,7 @@ public class ServerConnection {
             }
 
             write(new Message(foundTickets));
-        }
+        
         
     }
 
